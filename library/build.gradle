@@ -1,9 +1,12 @@
-apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+}
 
 android {
     compileSdkVersion 33
 
-
+    namespace =  'com.aeoxia.GlideToVectorYou'
 
     defaultConfig {
         minSdkVersion 19
@@ -22,6 +25,25 @@ android {
         }
     }
 
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+        }
+    }
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.github.aeoxia'
+            artifactId = 'glide-to-vector-you'
+            version = '1.0'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
 }
 
 dependencies {
