@@ -6,7 +6,7 @@ plugins {
 android {
     compileSdkVersion 33
 
-    namespace =  'com.aeoxia.GlideToVectorYou'
+    namespace =  'com.github.aeoxia.GlideToVectorYou'
 
     defaultConfig {
         minSdkVersion 19
