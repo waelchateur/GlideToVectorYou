@@ -14,6 +14,6 @@ class SimpleLoadActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_load)
 
-        GlideToVectorYou.justLoadImage(this, Uri.parse(IMAGE_URL), imageview)
+        GlideToVectorYou.LoadImage(this, Uri.parse(IMAGE_URL), imageview)
     }
 }
