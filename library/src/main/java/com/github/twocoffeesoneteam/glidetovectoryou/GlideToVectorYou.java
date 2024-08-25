@@ -63,13 +63,13 @@ public class GlideToVectorYou {
 
     }
 
-    public static void justLoadImage(Activity activity, Uri uri, ImageView imageView){
+    public static void LoadImage(Activity activity, Uri uri, ImageView imageView){
         GlideApp.with(activity)
                 .as(PictureDrawable.class)
                 .listener(new SvgSoftwareLayerSetter()).load(uri).into(imageView);
     }
 
-    public static void justLoadImageAsBackground(Activity activity, Uri uri, final View view) {
+    public static void LoadImageAsBackground(Activity activity, Uri uri, final View view) {
         GlideApp.with(activity).load(uri).into(new SimpleTarget<Drawable>() {
             @Override
             public void onResourceReady(@NonNull Drawable resource, Transition<? super Drawable> transition) {
